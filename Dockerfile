@@ -19,4 +19,4 @@ COPY --from=builder /app/apps/cli/dist/synch.js /usr/local/bin/synch
 
 RUN chmod +x /usr/local/bin/synch
 
-ENTRYPOINT ["/usr/local/bin/synch"]
+ENV PATH="/usr/local/bin:${PATH}"
